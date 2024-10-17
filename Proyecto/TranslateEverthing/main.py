@@ -36,21 +36,30 @@ def main(page: ft.Page):
     translated_text = ""
     
 
+    def lang_code_checker(lang):
+        if lang == "Español":
+            code = "es"
+        elif lang == "English":
+            code = "en"
+
+        return code
+    
+
     def translate(e):
         if text_input.value != None:
-            translated_text = translator.translate(text=text_input.value, dest=translate_options.data)
+            translated_text = translator.translate(text=text_input.value, dest=lang_code_checker(translate_options.value))
 
         print("LOG >> ", text_input.value)
         print("LOG >> ", translated_text)
 
-    
+
     translate_button = ft.ElevatedButton(text="Traducir", on_click=translate)
     
     text_output = ft.Text(f"Resultado: {translated_text}", size=20)
 
     translate_options = ft.Dropdown(
-            label=lang_labels["translate_options_label"],
-            hint_text=lang_labels["translate_options_label"],
+            label=translator.translate(lang_labels["translate_options_label"], lang_labels["lang_code"]),
+            hint_text=translator.translate(lang_labels["translate_options_label"], lang_labels["lang_code"]),
             options=[
                 ft.dropdown.Option("Español", data="es"),
                 ft.dropdown.Option("English", data="en"),

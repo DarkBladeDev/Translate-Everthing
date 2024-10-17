@@ -36,12 +36,19 @@ def main(page: ft.Page):
             autofocus=True,
         )
 
-
+    def lang_code_checker(lang):
+        if lang == "Español":
+            code = "es"
+        elif lang == "English":
+            code = "en"
+        else:
+            code = "es"
+        return code
 
     def change_page(e):
         if selector.value == "Español" or selector.value == "English":
             with open("TranslateEverthing/assets/variables.pkl", "wb") as f:
-                pickle.dump({"code": selector.data}, f)
+                pickle.dump({"code": lang_code_checker(selector.value)}, f)
             page.window.close()
             subprocess.Popen(["python", "TranslateEverthing/main.py"])
 

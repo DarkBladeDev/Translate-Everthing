@@ -63,7 +63,7 @@ def selector(page: ft.Page):
 
     def login_click():
         page.window.close()
-        subprocess.Popen(["python", "TranslateEverthing/main.py"])
+        subprocess.Popen(["python", "TranslateEverthing/lang_selector.py"])
 
     # -------------------------------------------------------------------
 
