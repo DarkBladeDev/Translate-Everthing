@@ -35,7 +35,8 @@ def main(page: ft.Page):
             code = "es"
         elif lang == "English":
             code = "en"
-
+        else:
+            code = "es"
         return code
 
     translator = Translator()
