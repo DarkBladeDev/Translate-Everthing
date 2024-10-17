@@ -29,12 +29,6 @@ def main(page: ft.Page):
 
     # Code ------------------------------------
     
-    text_input = ft.TextField(label=lang_labels["text_input"])
-
-    translator = Translator()
-
-    translated_text = ""
-    
 
     def lang_code_checker(lang):
         if lang == "Español":
@@ -43,6 +37,13 @@ def main(page: ft.Page):
             code = "en"
 
         return code
+
+    translator = Translator()
+
+    text_input = ft.TextField(label=translator.translate(lang_code_checker(lang_labels["text_input"]), lang_labels["lang_code"]))
+
+
+    translated_text = ""
     
 
     def translate(e):
