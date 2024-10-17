@@ -1,24 +1,73 @@
-import googletrans as tl
+from googletrans import Translator
 import flet as ft
+import pickle
 
 def main(page: ft.Page):
 
     # Page Propierties -----------------------
 
-    page.title = "Translate Everthing"
+    page.title = "Translate Everthing - Main app"
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
 
     # -----------------------------------------
 
-    # Code ------------------------------------
+    # Lang Labels -----------------------------
 
-    translator = tl.Translator()
-    translated_text
+    with open("TranslateEverthing/assets/variables.pkl", "rb") as f:
+        lang_code = pickle.load(f)
+
+    lang_labels = {
+        'lang_code' : lang_code["code"],
+        'text_input': "Ingrese el texto a traducir",
+        'translate_options_label': "Idioma",
+        'translate_options_hint': "Selecciona el lenguaje al que traducir"
+    }
     
-    text_input = ft.TextField(label="Texto a traducir")
-    text_output = ft.Text()
-
-
-
+    print("LOG >> ", lang_labels)
     # -----------------------------------------
+
+    # Code ------------------------------------
+    
+    text_input = ft.TextField(label=lang_labels["text_input"])
+
+    translator = Translator()
+
+    translated_text = ""
+    
+
+    def translate(e):
+        if text_input.value != None:
+            translated_text = translator.translate(text=text_input.value, dest=translate_options.data)
+
+        print("LOG >> ", text_input.value)
+        print("LOG >> ", translated_text)
+
+    
+    translate_button = ft.ElevatedButton(text="Traducir", on_click=translate)
+    
+    text_output = ft.Text(f"Resultado: {translated_text}", size=20)
+
+    translate_options = ft.Dropdown(
+            label=lang_labels["translate_options_label"],
+            hint_text=lang_labels["translate_options_label"],
+            options=[
+                ft.dropdown.Option("Español", data="es"),
+                ft.dropdown.Option("English", data="en"),
+            ],
+            autofocus=True,
+        )
+
+    page.add(
+        ft.Column(controls=[
+            ft.Row(controls=[
+                text_input,
+                translate_options
+            ]),
+            translate_button,
+            text_output,
+        ])
+    )
+    # -----------------------------------------
+
+ft.app(main)
