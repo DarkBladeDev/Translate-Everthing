@@ -19,6 +19,15 @@ def main(page: ft.Page):
     page.title = "Translate Everthing - Language Selector"
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
+    page.window.maximized = True
+    page.decoration = ft.BoxDecoration(
+        image = ft.DecorationImage(
+            src = "assets/images/background-2.webp",
+            fit = ft.ImageFit.COVER,
+            opacity = 0.7
+            )
+        )
+    
 
     # -----------------------------------------
     

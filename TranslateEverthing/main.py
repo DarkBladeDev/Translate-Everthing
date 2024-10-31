@@ -17,8 +17,17 @@ def main(page: ft.Page):
     # Page Propierties -----------------------
 
     page.title = "Translate Everthing - Main app"
-    page.vertical_alignment = ft.MainAxisAlignment.CENTER
-    page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
+    #page.vertical_alignment = ft.MainAxisAlignment.CENTER
+    #page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
+    page.window.maximized = True
+    page.decoration = ft.BoxDecoration(
+        image = ft.DecorationImage(
+            src = "assets/images/background-1.jpg",
+            fit = ft.ImageFit.COVER,
+            opacity = 0.7
+            )
+        )
+    
 
     # -----------------------------------------
 
@@ -84,6 +93,19 @@ def main(page: ft.Page):
                 ft.dropdown.Option("English", data="en"),
             ],
             autofocus=True,
+        )
+    
+
+    page.appbar = ft.AppBar(
+        leading=ft.Icon(ft.icons.TRANSLATE),
+        leading_width=40,
+        title=ft.Text("Translate Everthing"),
+        center_title=False,
+        bgcolor=ft.colors.SURFACE_VARIANT,
+        actions=[
+            ft.IconButton(ft.icons.LANGUAGE, hover_color=ft.colors.GREEN),
+            ft.IconButton(ft.icons.EXIT_TO_APP, hover_color=ft.colors.RED),
+            ],
         )
 
     page.add(
