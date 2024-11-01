@@ -12,12 +12,13 @@ def lang_code_checker(lang):
             code = "es"
         return code
 
+
 def main(page: ft.Page):
 
     # Page Propierties -----------------------
 
     page.title = "Translate Everthing - Main app"
-    #page.vertical_alignment = ft.MainAxisAlignment.CENTER
+    page.vertical_alignment = ft.MainAxisAlignment.CENTER
     #page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
     page.window.maximized = True
     page.decoration = ft.BoxDecoration(
@@ -104,7 +105,7 @@ def main(page: ft.Page):
         bgcolor=ft.colors.SURFACE_VARIANT,
         actions=[
             ft.IconButton(ft.icons.LANGUAGE, hover_color=ft.colors.GREEN),
-            ft.IconButton(ft.icons.EXIT_TO_APP, hover_color=ft.colors.RED),
+            ft.IconButton(ft.icons.EXIT_TO_APP, hover_color=ft.colors.RED, on_click=lambda e: page.window.close()),
             ],
         )
 
