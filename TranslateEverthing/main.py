@@ -2,6 +2,7 @@ import flet as ft
 from deep_translator import GoogleTranslator
 import pickle
 import os
+import subprocess
 
 def lang_code_checker(lang):
         if lang == "Español":
@@ -23,7 +24,7 @@ def main(page: ft.Page):
     page.window.maximized = True
     page.decoration = ft.BoxDecoration(
         image = ft.DecorationImage(
-            src = "assets/images/background-1.jpg",
+            src = "./assets/images/background-1.jpg",
             fit = ft.ImageFit.COVER,
             opacity = 0.7
             )
@@ -42,6 +43,8 @@ def main(page: ft.Page):
         'translate_options_label': "Idioma",
         'translate_options_hint': "Selecciona el lenguaje al que traducir",
         'translate_button_text' : "Traducir",
+        'language_icon_tooltip' : "Cambiar idioma",
+        'exit_icon_tooltip' : "Cerrar aplicación",
     }
 
 
@@ -60,6 +63,10 @@ def main(page: ft.Page):
     # -----------------------------------------
 
     # Code ------------------------------------
+
+    def change_page(e):
+        page.window.close()
+        subprocess.Popen(["python", "./lang_selector.py"])
 
     translated_text = ""
 
@@ -104,8 +111,8 @@ def main(page: ft.Page):
         center_title=False,
         bgcolor=ft.colors.SURFACE_VARIANT,
         actions=[
-            ft.IconButton(ft.icons.LANGUAGE, hover_color=ft.colors.GREEN),
-            ft.IconButton(ft.icons.EXIT_TO_APP, hover_color=ft.colors.RED, on_click=lambda e: page.window.close()),
+            ft.IconButton(ft.icons.LANGUAGE, hover_color=ft.colors.GREEN, tooltip=translator.translate(lang_labels["language_icon_tooltip"]), on_click=lambda e: change_page(e)),
+            ft.IconButton(ft.icons.EXIT_TO_APP, hover_color=ft.colors.RED, tooltip=translator.translate(lang_labels["exit_icon_tooltip"]), on_click=lambda e: page.window.close()),
             ],
         )
 
