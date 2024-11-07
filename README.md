@@ -63,7 +63,7 @@ Instrucciones para ejecutar la app.
 
 - [Python](https://www.python.org/) - El lenguaje utilizado
 - [Flet](https://flet.dev) - El framework grafico utilizado
-- [deep-translator]((https://pypi.org/project/deep-translator/) - El framework de traducción utilizado
+- [deep-translator](https://pypi.org/project/deep-translator/) - El framework de traducción utilizado
 
 ## Contribuyendo 🖇️
 
