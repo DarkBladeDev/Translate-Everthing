@@ -25,85 +25,74 @@ Estas instrucciones te guiarán para obtener una copia de este proyecto en funci
 
 Lista de software y herramientas, incluyendo versiones, que necesitas para instalar y ejecutar este proyecto:
 
-- Windows 10
+- Windows / Mac / Linux
 - Python 3.12.2
 - Frameworks [Flet](https://flet.dev) y [deep-translator](https://pypi.org/project/deep-translator/)
 
 ### Instalación 🔧
 
-Una guía paso a paso sobre cómo configurar el entorno de desarrollo e instalar todas las dependencias.
-
+1. Primero necesitamos tener [Python 3.12.2](https://www.python.org/ftp/python/3.12.2/python-3.12.2-amd64.exe) instalado.
+2. Después instalar Flet con el instalador de paquetes de python (pip).
 ```bash
-# paso 1
+# pip install flet
 ```
 
-Y así sucesivamente...
+3. Ahora instalaremos deep-translator.
 
 ```bash
-# paso 2
+# pip install deep-translator
 ```
 
-## Ejecutando las Pruebas ⚙️
+## Ejecutando Translate Everything ⚙️
 
-Instrucciones y ejemplos para ejecutar el conjunto de pruebas.
+Instrucciones para ejecutar la app.
+
+1. Debemos clonar el repositorio y entrar a la carpeta del proyecto
 
 ```bash
-# proporciona un ejemplo
+# cd Translate-Everything-main\TranslateEverthing
 ```
 
-### Pruebas de Principio a Fin 🔩
-
-Explica qué cubren estas pruebas, por qué son importantes y cómo interpretar sus resultados.
-
-### Pruebas de Estilo de Código ⌨️
-
-Descripción y ejemplos de las pruebas de estilo que estás utilizando.
+2. Despues debemos ejecutar el script **"login.py"**
 
 ```bash
-# proporciona un ejemplo
+# python login.py
 ```
-
-## Despliegue 📦
-
-Instrucciones sobre cómo desplegar esto en un sistema en vivo o ambiente de producción.
 
 ## Construido Con 🛠️
 
-Explica qué tecnologías usaste para construir este proyecto. Aquí algunos ejemplos:
-
-- [Ruby](https://www.ruby-lang.org/es/) - El lenguaje utilizado
-- [Ruby on Rails](https://rubyonrails.org) - El framework web utilizado
-- [Ruby gems](https://rubygems.org) - Gestión de dependencias
-- [Postgresql](https://www.postgresql.org) - Sistema de base de datos
-- [Bulma IO](https://bulma.io) - Framework de CSS
+- [Python](https://www.python.org/) - El lenguaje utilizado
+- [Flet](https://flet.dev) - El framework grafico utilizado
+- [deep-translator]((https://pypi.org/project/deep-translator/) - El framework de traducción utilizado
 
 ## Contribuyendo 🖇️
 
-Las contribuciones son lo que hacen a la comunidad de código abierto un lugar increíble para aprender, inspirar y crear. Cualquier contribución que hagas es muy apreciada. Por favor, lee el [CONTRIBUTING.md](https://gist.github.com/brayandiazc/xxxxxx) para detalles sobre nuestro código de conducta, y el proceso para enviarnos pull requests.
+Las contribuciones son lo que hacen a la comunidad de código abierto un lugar increíble para aprender, inspirar y crear. Cualquier contribución que hagas es muy apreciada. Por favor, lee el [CONTRIBUTING.md](https://gist.github.com/DarkBladeDev/c6a7332e28ba69e82b2190727030830c) para detalles sobre nuestro código de conducta, y el proceso para enviarnos pull requests.
 
 ## Wiki 📖
 
-Puedes encontrar mucho más sobre cómo usar este proyecto en nuestra [Wiki](https://github.com/your/project/wiki)
+Puedes encontrar mucho más sobre cómo usar este proyecto en nuestra [Wiki](https://github.com/DarkBladeDev/Translate-Everything/wiki)
 
 ## Soporte
 
-Si tienes algún problema o sugerencia, por favor abre un problema [aquí](https://github.com/your/project/issues).
+Si tienes algún problema o sugerencia, por favor abre un problema [aquí](https://github.com/DarkBladeDev/Translate-Everything/issues).
 
 ## Roadmap
 
-Ideas, mejoras planificadas y actualizaciones futuras
+Ideas, mejoras planificadas y actualizaciones futuras para el proyecto actual:
 
-para el proyecto actual.
+1. Añadir mas idiomas.
+2. Mejorar la estética de la app.
 
 ## Versionado 📌
 
-Usamos [Git](https://git-scm.com) para el versionado. Para las versiones disponibles, ve las [etiquetas en este repositorio](https://github.com/your/project/tags).
+Usamos [Git](https://git-scm.com) para el versionado. Para las versiones disponibles, ve las [etiquetas en este repositorio](https://github.com/DarkBladeDev/Translate-Everything/tags).
 
 ## Autores ✒️
 
-- **Brayan Diaz C** - _Trabajo inicial_ - [Brayan Diaz C](https://github.com/brayandiazc)
+- **DarkBladeDev** - _Autor_ - [Perfil](https://github.com/DarkBladeDev)
 
-Mira también la lista de [contribuidores](https://github.com/your/project/contributors) que han participado en este proyecto.
+Mira también la lista de [contribuidores](https://github.com/DarkBladeDev/Translate-Everything/contributors) que han participado en este proyecto.
 
 ## Licencia 📄
 
@@ -119,18 +108,3 @@ Estamos agradecidos por las contribuciones de la comunidad a este proyecto. Si e
 - Muestra tu agradecimiento diciendo gracias en un nuevo problema.
 
 ---
-
-## Consejos Adicionales 📝
-
-Aquí hay algunos consejos extra para aprovechar al máximo tu README:
-
-- Mantén cada sección lo más concisa posible. Evita la pelusa innecesaria, ya que puede ser abrumadora para el lector.
-- Asegúrate de que tus instrucciones de instalación, pruebas y despliegue sean detalladas y precisas. Si hay pasos adicionales que el lector necesita tomar (como instalar dependencias extra), asegúrate de incluirlos.
-- Los visuales (imágenes, GIFs) son muy útiles para transmitir rápidamente lo que hace tu proyecto y cómo usarlo. Si puedes, incluye capturas de pantalla de tu aplicación en acción o GIFs que demuestren su uso.
-- El tono amigable y acogedor que usas en tu README es excelente. Ayuda a hacer tu proyecto más acogedor para los colaboradores.
-
-Recuerda, un buen README es crucial para hacer que tu proyecto sea atractivo y accesible para otros desarrolladores. ¡Buena suerte con tu proyecto!
-
----
-
-⌨️ con ❤️ por [Brayan Diaz C](https://github.com/brayandiazc) 😊
