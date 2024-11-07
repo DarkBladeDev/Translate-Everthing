@@ -2,8 +2,7 @@
 
 ## Descripción
 
-**App de traductor hecha en python con Flet y deep-translator**
-
+App de traductor hecha en python con Flet y deep-translator
 
 ## Insignias
 
@@ -11,7 +10,12 @@ El proyecto está terminado, testeado y en funcionamiento
 
 ## Visuales
 
-Capturas de pantalla, videos o GIFs que demuestran lo que hace el proyecto y cómo usarlo.
+![Login](https://github.com/user-attachments/assets/97d637c5-9b3b-40f9-9f44-39a86559152c)
+
+![Lang_selector](https://github.com/user-attachments/assets/29c37620-6c67-48da-9355-ba1d018f425a)
+
+![Main_app](https://github.com/user-attachments/assets/b8996c21-5d1f-4f53-b62d-8d89c4a641be)
+
 
 ## Empezando 🚀
 
@@ -21,11 +25,9 @@ Estas instrucciones te guiarán para obtener una copia de este proyecto en funci
 
 Lista de software y herramientas, incluyendo versiones, que necesitas para instalar y ejecutar este proyecto:
 
-- Sistema Operativo (por ejemplo, Ubuntu 20.04, Windows 10)
-- Lenguaje de programación (por ejemplo, Python 3.8)
-- Framework (por ejemplo, Django 3.1)
-- Base de datos (por ejemplo, PostgreSQL 12)
-- Otros...
+- Windows 10
+- Python 3.12.2
+- Frameworks [Flet](https://flet.dev) y [deep-translator](https://pypi.org/project/deep-translator/)
 
 ### Instalación 🔧
 
