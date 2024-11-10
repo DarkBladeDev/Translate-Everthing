@@ -96,7 +96,7 @@ Mira también la lista de [contribuidores](https://github.com/DarkBladeDev/Trans
 
 ## Licencia 📄
 
-Este proyecto está bajo la Licencia XYZ - ve el archivo [LICENSE.md](LICENSE.md) para detalles
+Este proyecto está bajo la Licencia MIT - ve el archivo [LICENSE](LICENSE.md) para detalles
 
 ## Expresiones de Gratitud 🎁
 
